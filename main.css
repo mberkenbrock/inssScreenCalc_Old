@@ -1,0 +1,83 @@
+.calcINSS {
+    background-color : 	#2F75B5;
+    text-align: center;
+}
+.calcBase {
+    background-color : 	#2F75B5;
+    text-align: center;
+}
+
+.inp {
+    width: 150px;
+    height: 40px;
+
+}
+.table1 {
+   color: white;
+   border: dotted 1px black;
+}
+
+.table2 {
+    background-color: azure;
+    color: black;
+    line-height: 1;
+
+    border: dotted 1px black;
+}
+
+.txCalculo {
+    color:white;
+    font-size:30.0pt;
+    text-align: center;
+    margin: 0em;
+}
+
+
+.tabelaValores {
+    line-height: 15px;
+    background-color: gray;
+}
+
+.t0 {
+    text-align: left;
+    width: 400px;
+    font-size: 13pt;
+}
+.t00 {
+    text-align: left;
+    width: 50px;
+    font-size: 13pt;
+}
+
+.t01 {
+    width: 200px;
+    font-size: 13pt;
+    align-items: center;
+}
+
+.t1{
+    border: dotted 1px black;
+    text-align: left;
+    width: 400px;
+    font-size: 13pt;
+}
+.t2{
+    border: dotted 1px black;
+    width: 50px;
+    font-size: 13pt;
+}
+.t3{
+    border: dotted 1px black;
+    width: 200px;
+    font-size: 13pt;
+    align-items: center;
+}
+
+.txBaseTabela {
+    color:white;
+    width: 200px;
+}
+
+.container {
+    background-color: red;
+}
