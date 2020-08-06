@@ -2,7 +2,7 @@ const vlTeto = 713.08;
 const acimaTeto = 6101.06;
 const faixaValorInss = [78.37,94.01,125.37,415.33];
 const percentualFaixa = [0.075,0.09,0.12,0.14];
-const valorFaixaDesconto = [1045.00,1044.60,1044.80,2966.666;
+const valorFaixaDesconto = [1045.00,1044.60,1044.80,2966.66;
 
 function apiCalcInss(valor){
     var valorInss = 0;
