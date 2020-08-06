@@ -1,86 +1,108 @@
 <!DOCTYPE html>
 <html>
+
 <head class="head">
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
 </head>
+
 <body class="body">
-    <div class="calcINSS"> 
-        <h1 class="txCalculo">Cálculo INSS 2020</h1>
-    </div>
-    <div class="calcBase">
-        <table class="table1">
-            <TR>
-                <TD class="t0" >Base de cálculo (R$)</TD>
-                <TD class="t00"></TD>
-                <TD class="t01">Valor Inicial</TD>
-                <TD class="t01">Valor Final</TD>
-                <TD class="t01">Alíquota</TD>
-                <TD class="t01">Parcela a deduzir do INSS (R$)</TD>
-                <TD class="t01">% Valor Inicial</TD>
-                <TD class="t01">% Valor Final</TD>
-                <TD class="t01">Diferença</TD>
-            </TR>
-        </table>
-        <table class="table2">
-            <TR>
-                <TD class="t1">até 1045,00</TD>
-                <TD class="t2">1045,00</TD>
-                <TD class="t3">0,00</TD>
-                <TD class="t3">1045,00</TD>
-                <TD class="t3">7,50%</TD>
-                <TD class="t3">0,0000</TD>
-                <TD class="t3">0,00</TD>
-                <TD class="t3">78,3750</TD>
-                <TD class="t3">78,3800</TD>
-            </TR>
-            <TR>
-                <TD class="t1">de 1045 a 2089,60</td>	
-                <TD class="t2">1044,60</td>	
-                <TD class="t3">1045,01</td>	
-                <TD class="t3">2089,60</td>	
-                <TD class="t3">9,00%</td>	
-                <TD class="t3">15,6800</td>	
-                <TD class="t3">94,0509</td>	
-                <TD class="t3">188,0600</td>	
-                <TD class="t3">172,3800</td>
-            </TR>
-            <TR>
-                <TD class="t1">de 2089,61 a 3134,40</td>	
-                <TD class="t2">1044,80</td>	
-                <TD class="t3">2089,61</td>	
-                <TD class="t3">3134,40</td>	 	
-                <TD class="t3">12,00%</td>	
-                <TD class="t3">78,3800</td>	
-                <TD class="t3">250,7532</td>	
-                <TD class="t3">376,1280</td>	
-                <TD class="t3">297,7500</td>
-            </TR>
 
-            <TR>
-                <TD class="t1">de 3134,41 a 6101,06 (teto)</td>	
-                <TD class="t2">2966,66</td>	
-                <TD class="t3">3134,41</td>	
-                <TD class="t3">6101,06</td>	 	
-                <TD class="t3">14,00%</td>	
-                <TD class="t3">141,0700</td>	
-                <TD class="t3">438,8174</td>	
-                <TD class="t3">854,1484</td>	
-                <TD class="t3">713,0800</td>
-            </TR>
-       </table>  
-    </div>
-    <div id="container"> 
-        <h2>Base INSS</h1>
-        <input type="number" id="baseCalc" class="inp" onfocusout="apiCalcInss(baseCalc.value)" placeholder="Valor Salário">
-        <input type="number" id="calcInss" placeholder="Valor INSS" class="inp">
-        <input type="text"   id="aliquota"placeholder="Aliquota Efetiva" class="inp">
+    <div class="container">
+        <div class="row" style="max-width: 1000px">
+            <div class="col" style="max-width: 1000px" >
+                <h1>Cálculo INSS 2020</h1>
+            </div>
 
-    </div>
+            <div class="col-sm-3">
+                <h3>Base INSS</h3>
+                <input type="number" class="form-control" id="baseCalc" onfocusout="apiCalcInss(baseCalc.value)"
+                    placeholder="Valor Base INSS">
+            </div>
 
+            <div class="col-sm-3">
+                <h3>Valor INSS</h3>
+                <input type="number" class="form-control" id="calcInss">
+            </div>
+
+            <div class=col-sm-3>
+                <h3>Alíquota Efetiva</h3>
+                <input type="text" class="form-control" id="aliquota"">
+            </div>
+        </div>
+        <div>
+            <br>
+        </div>
+     </div>
+
+        <div class=" calcBase">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <TR>
+                            <th scope="col">Base de cálculo (R$)</th>
+                            <th scope="col"></th>
+                            <th scope="col">Valor Inicial</th>
+                            <th scope="col">Valor Final</th>
+                            <th scope="col">Alíquota</th>
+                            <th scope="col">Parcela a deduzir do INSS (R$)</th>
+                            <th scope="col">% Valor Inicial</th>
+                            <th scope="col">% Valor Final</th>
+                            <th scope="col">Diferença</th>
+                        </TR>
+                    </thead>
+                    <tbody>
+                        <TR>
+                            <TD>até 1045,00</TD>
+                            <TD>1045,00</TD>
+                            <TD>0,00</TD>
+                            <TD>1045,00</TD>
+                            <TD>7,50%</TD>
+                            <TD>0,0000</TD>
+                            <TD>0,00</TD>
+                            <TD>78,3750</TD>
+                            <TD>78,3800</TD>
+                        </TR>
+                        <TR>
+                            <TD>de 1045 a 2089,60</td>
+                            <TD>1044,60</td>
+                            <TD>1045,01</td>
+                            <TD>2089,60</td>
+                            <TD>9,00%</td>
+                            <TD>15,6800</td>
+                            <TD>94,0509</td>
+                            <TD>188,0600</td>
+                            <TD>172,3800</td>
+                        </TR>
+                        <TR>
+                            <TD>de 2089,61 a 3134,40</td>
+                            <TD>1044,80</td>
+                            <TD>2089,61</td>
+                            <TD>3134,40</td>
+                            <TD>12,00%</td>
+                            <TD>78,3800</td>
+                            <TD>250,7532</td>
+                            <TD>376,1280</td>
+                            <TD>297,7500</td>
+                        </TR>
+                        <TR>
+                            <TD>de 3134,41 a 6101,06 </td>
+                            <TD>2966,66</td>
+                            <TD>3134,41</td>
+                            <TD>6101,06</td>
+                            <TD>14,00%</td>
+                            <TD>141,0700</td>
+                            <TD>438,8174</td>
+                            <TD>854,1484</td>
+                            <TD>713,0800</td>
+                        </TR>
+                    </tbody>
+                </table>
+            </div>
 </body>
 </html>
