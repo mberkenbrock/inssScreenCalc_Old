@@ -79,5 +79,20 @@
 }
 
 .container {
-    background-color: red;
+    position: absolute;
+    padding-top: 0px;
+    padding-right: 5px;
+    width: auto ;
+    margin-top: 0px;
+    margin: 0px;
+    background-color: beige;
+    display: inline-block;
+    left: auto;
+}
+.container2 {
+    position: absolute;
+    margin-top: 0px;
+    background-color: beige;
+    display: inline-block;
+    right: 875px;
 }
