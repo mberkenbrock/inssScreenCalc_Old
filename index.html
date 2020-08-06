@@ -3,9 +3,12 @@
 
 <head class="head">
     <meta charset='utf-8'>
+	<!-- Tell the browser to be responsive to screen width -->
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    
     <script src='main.js'></script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
@@ -14,9 +17,9 @@
 
 <body class="body">
 
-    <div class="container">
-        <div class="row" style="max-width: 1000px">
-            <div class="col" style="max-width: 1000px" >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3" style="max-width:250px;">
                 <h1>Cálculo INSS 2020</h1>
             </div>
 
@@ -31,7 +34,7 @@
                 <input type="number" class="form-control" id="calcInss">
             </div>
 
-            <div class=col-sm-3>
+            <div class="col-sm-3">
                 <h3>Alíquota Efetiva</h3>
                 <input type="text" class="form-control" id="aliquota"">
             </div>
@@ -39,9 +42,9 @@
         <div>
             <br>
         </div>
-     </div>
 
-        <div class=" calcBase">
+		<div class="table-responsive">
+			<div class=" calcBase">
                 <table class="table table-striped">
                     <thead class="thead-dark">
                         <TR>
@@ -104,5 +107,7 @@
                     </tbody>
                 </table>
             </div>
+		</div>
+	</div>			
 </body>
 </html>
