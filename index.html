@@ -29,75 +29,70 @@
 					</div>
 					<div class="col-md-4">
 						<h3>Valor INSS</h3>
-						<input type="number" class="form-control" id="calcInss">
+						<input type="number" class="form-control" id="calcInss" disabled>
 					</div>
 
 					<div class="col-md-4">
 						<h3>Alíquota Efetiva</h3>
-						<input type="text" class="form-control" id="aliquota">
+						<input type="text" class="form-control" id="aliquota" disabled>
 					</div>
 				</div>
 			</div>
         </div>        
         <br>
-        <div class="table-responsive">
+        <div class="table-responsive table-sm">
 			<div class=" PrimeiracalcBase" style="max-width:600px">
                 <table class="table table-striped">
-                    <thead class="thead-dark">
+                    <thead class="thead-dark" >
                         <TR>
-                            <th scope="col">Base de cálculo (R$)</th>
-                            <th scope="col">Alíquota</th>
-                            <th scope="col">Base</th>
-                            <th scope="col">Valor</th>
+                            <th>Base de cálculo (R$)</th>
+                            <th>Alíquota</th>
+                            <th>Base</th>
+                            <th>Valor</th>
                         </TR>
                     </thead>
-                    <tbody>
+                    <tbody align="right">
                         <TR>
-                            <TD>até 1045,00 (salário mínimo)</TD>
-                            <TD>7,5%</TD>
+                            <TD align="left">até 1045,00 (salário mínimo)</TD>
+                            <TD>7,50%</TD>
                             <TD id="b1">0,00</TD>
                             <TD id="v1">0,00</TD>
                         </TR>
                         <TR>
-                            <TD>de 1045,01 a 2089,60</TD>
-                            <TD>9,0%</TD>
+                            <TD align="left">de 1045,01 a 2089,60</TD>
+                            <TD>9,00%</TD>
                             <TD id="b2">0,00</TD>
                             <TD id="v2">0,00</TD>
                         </TR>
                         <TR>
-                            <TD>de 2089,61 a 3134,40</TD>
+                            <TD align="left">de 2089,61 a 3134,40</TD>
                             <TD>12,0%</TD>
                             <TD id="b3">0,00</TD>
                             <TD id="v3">0,00</TD>
                         </TR>
                         <TR>
-                            <TD>de 3134,41 a 6101,06 (teto)</TD>
+                            <TD align="left">de 3134,41 a 6101,06 (teto)</TD>
                             <TD>14,0%</TD>
                             <TD id="b4">0,00</TD>
                             <TD id="v4">0,00</TD>
                         </TR>
                         <TR>
                             <TD></TD>
-                            <TD>∑ total</TD>
+                            <TD>∑ Total</TD>
                             <TD id="tb">0,00</TD>
                             <TD id="tv">0,00</TD>
                         </TR>
-                        <TR>
-                            <TD></TD>
-                            <TD>> Teto</TD>
-                            <TD>0,00</TD>
-                            <TD>0,00</TD>
-                        </TR>
+                        
                     </tbody>
                 </table>
             </div>
         </div>
-        
-		<div class="table-responsive">
+
+        <div class="table-responsive table-sm">
 			<div class=" calcBase">
                 <table class="table table-striped">
                     <thead class="thead-dark">
-                        <TR>
+                        <TR align="right">
                             <th scope="col">Base de cálculo (R$)</th>
                             <th scope="col"></th>
                             <th scope="col">Valor Inicial</th>
@@ -109,9 +104,9 @@
                             <th scope="col">Diferença</th>
                         </TR>
                     </thead>
-                    <tbody>
+                    <tbody align="right">
                         <TR>
-                            <TD>até 1045,00</TD>
+                            <TD align="left">até 1045,00</TD>
                             <TD>1045,00</TD>
                             <TD>0,00</TD>
                             <TD>1045,00</TD>
@@ -122,7 +117,7 @@
                             <TD>78,3800</TD>
                         </TR>
                         <TR>
-                            <TD>de 1045 a 2089,60</td>
+                            <TD align="left">de 1045 a 2089,60</td>
                             <TD>1044,60</td>
                             <TD>1045,01</td>
                             <TD>2089,60</td>
@@ -133,7 +128,7 @@
                             <TD>172,3800</td>
                         </TR>
                         <TR>
-                            <TD>de 2089,61 a 3134,40</td>
+                            <TD align="left">de 2089,61 a 3134,40</td>
                             <TD>1044,80</td>
                             <TD>2089,61</td>
                             <TD>3134,40</td>
@@ -144,7 +139,7 @@
                             <TD>297,7500</td>
                         </TR>
                         <TR>
-                            <TD>de 3134,41 a 6101,06 </td>
+                            <TD align="left">de 3134,41 a 6101,06 </td>
                             <TD>2966,66</td>
                             <TD>3134,41</td>
                             <TD>6101,06</td>
@@ -157,7 +152,11 @@
                     </tbody>
                 </table>
             </div>
-		</div>
-	</div>			
+        </div>
+        <br>
+        <div class="alert alert-dark" role="alert">
+            Informe o Valor Base do Funcionário no Campo <b>Base INSS</b>.
+        </div>
+    </div>		
 </body>
 </html>
