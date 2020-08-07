@@ -29,6 +29,14 @@ function apiCalcInss(valor){
     if(valor != "" && valor > 0) {
         if(valor >= acimaTeto){
             valorInss = vlTeto;
+            base1.innerHTML = valorFaixaDesconto[0];
+            valor1.innerHTML = valorFaixaDesconto[0] * percentualFaixa[0];
+            base2.innerHTML = valorFaixaDesconto[1];
+            valor2.innerHTML = valorFaixaDesconto[1] * percentualFaixa[1];
+            base3.innerHTML = valorFaixaDesconto[2];
+            valor3.innerHTML = valorFaixaDesconto[2] * percentualFaixa[2];
+            base4.innerHTML = valorFaixaDesconto[3];
+            valor4.innerHTML = valorFaixaDesconto[3] * percentualFaixa[3];
         }
         else{
             if(valor <= valorFaixaDesconto[0]){
