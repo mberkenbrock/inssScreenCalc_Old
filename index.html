@@ -6,7 +6,10 @@
 	<!-- Tell the browser to be responsive to screen width -->
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Calculo INSS</title>
+
+    <script src='main.js'></script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
         integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
 </head>
@@ -36,7 +39,60 @@
 				</div>
 			</div>
         </div>        
-		<br>
+        <br>
+        <div class="table-responsive">
+			<div class=" PrimeiracalcBase" style="max-width:600px">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <TR>
+                            <th scope="col">Base de cálculo (R$)</th>
+                            <th scope="col">Alíquota</th>
+                            <th scope="col">Base</th>
+                            <th scope="col">Valor</th>
+                        </TR>
+                    </thead>
+                    <tbody>
+                        <TR>
+                            <TD>até 1045,00 (salário mínimo)</TD>
+                            <TD>7,5%</TD>
+                            <TD id="b1">0,00</TD>
+                            <TD id="v1">0,00</TD>
+                        </TR>
+                        <TR>
+                            <TD>de 1045,01 a 2089,60</TD>
+                            <TD>9,0%</TD>
+                            <TD id="b2">0,00</TD>
+                            <TD id="v2">0,00</TD>
+                        </TR>
+                        <TR>
+                            <TD>de 2089,61 a 3134,40</TD>
+                            <TD>12,0%</TD>
+                            <TD id="b3">0,00</TD>
+                            <TD id="v3">0,00</TD>
+                        </TR>
+                        <TR>
+                            <TD>de 3134,41 a 6101,06 (teto)</TD>
+                            <TD>14%</TD>
+                            <TD id="b4">0,00</TD>
+                            <TD id="v4">0,00</TD>
+                        </TR>
+                        <TR>
+                            <TD></TD>
+                            <TD>∑ total</TD>
+                            <TD>0,00</TD>
+                            <TD>0,00</TD>
+                        </TR>
+                        <TR>
+                            <TD></TD>
+                            <TD>> Teto</TD>
+                            <TD>0,00</TD>
+                            <TD>0,00</TD>
+                        </TR>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
 		<div class="table-responsive">
 			<div class=" calcBase">
                 <table class="table table-striped">
