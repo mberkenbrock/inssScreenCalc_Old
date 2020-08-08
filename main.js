@@ -44,11 +44,13 @@ function apiCalcInss(valor){
             if(valor <= valorFaixaDesconto[0]){
                 valorInss = valor * percentualFaixa[0];
                 base1.innerHTML =  valor; 
-                valor1.innerHTML = (valor * percentualFaixa[0] - 0.005).toFixed(2);
+                valor1.innerHTML = (valor * percentualFaixa[0]).toFixed(2);
             }
             else {     
                 valorRestante = valor - valorFaixaDesconto[0]; 
                 valorInss = faixaValorInss[0];
+
+                alert(valorInss);
 
                 base1.innerHTML = valorFaixaDesconto[0].toFixed(2);
                 valor1.innerHTML = (valorFaixaDesconto[0] * percentualFaixa[0] - 0.005).toFixed(2);
@@ -87,9 +89,8 @@ function apiCalcInss(valor){
                 }
                 else{
                     valorInss += valorRestante * percentualFaixa[1];
-                    base2.innerHTML = (valorRestante - 0.005).toFixed(2);
-                    valor2.innerHTML = (valorRestante * percentualFaixa[0] - 0.005).toFixed(2);
-
+                    base2.innerHTML = (valorRestante).toFixed(2);
+                    valor2.innerHTML = (valorRestante * percentualFaixa[1]).toFixed(2);
                 }
             }
         }
@@ -97,14 +98,14 @@ function apiCalcInss(valor){
         vlAliquota = valor < acimaTeto ? ((valorInss / valor) * 100).toFixed(2) : '11.69';
         aliquota.value = vlAliquota + '%';
 
+        var valor10 = valor > acimaTeto ? acimaTeto * 100 : valor * 100;
+        valor10 = valor10.toString();
+        var len = valor10.length;
+        var valorFormatado = valor10.substring(0, len - 2) + "." + valor10.substring(len - 2);
+        
 
-       var valor10 = valor * 100;
-       valor10 = valor10.toString();
-       var len = valor10.length;
-       var valorFormatado = valor10.substring(0, len - 2) + "." + valor10.substring(len - 2);
 
-         
-       document.getElementById("tv").innerHTML = calcInss.value;
-       document.getElementById("tb").innerHTML = valorFormatado;
+        document.getElementById("tv").innerHTML = calcInss.value;
+        document.getElementById("tb").innerHTML = valorFormatado;
     }
 }
