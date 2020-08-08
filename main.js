@@ -50,14 +50,13 @@ function apiCalcInss(valor){
                 valorRestante = valor - valorFaixaDesconto[0]; 
                 valorInss = faixaValorInss[0];
 
-                alert(valorInss);
-
                 base1.innerHTML = valorFaixaDesconto[0].toFixed(2);
                 valor1.innerHTML = (valorFaixaDesconto[0] * percentualFaixa[0] - 0.005).toFixed(2);
 
                 if(valorRestante > valorFaixaDesconto[1]){
                     valorRestante -= valorFaixaDesconto[1]; 
                     valorInss += faixaValorInss[1];
+
 
                     base2.innerHTML = valorFaixaDesconto[1].toFixed(2) ;
                     valor2.innerHTML = (valorFaixaDesconto[1] * percentualFaixa[1] - 0.005).toFixed(2);
@@ -94,6 +93,7 @@ function apiCalcInss(valor){
                 }
             }
         }
+
         calcInss.value =   (valorInss - 0.005).toFixed(2);
         vlAliquota = valor < acimaTeto ? ((valorInss / valor) * 100).toFixed(2) : '11.69';
         aliquota.value = vlAliquota + '%';
@@ -103,8 +103,13 @@ function apiCalcInss(valor){
         var len = valor10.length;
         var valorFormatado = valor10.substring(0, len - 2) + "." + valor10.substring(len - 2);
         
+        var total = parseFloat(valor1.innerHTML) + parseFloat(valor2.innerHTML) + parseFloat(valor3.innerHTML) +  parseFloat(valor4.innerHTML);
+        total = (total - 0.005).toFixed(2);
 
-
+        if(parseFloat(total) > parseFloat(calcInss.value)){
+            calcInss.value = total;            
+        }
+        
         document.getElementById("tv").innerHTML = calcInss.value;
         document.getElementById("tb").innerHTML = valorFormatado;
     }
