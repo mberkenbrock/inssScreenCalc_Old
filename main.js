@@ -104,7 +104,8 @@ function apiCalcInss(valor){
         var valorFormatado = valor10.substring(0, len - 2) + "." + valor10.substring(len - 2);
         
         var total = parseFloat(valor1.innerHTML) + parseFloat(valor2.innerHTML) + parseFloat(valor3.innerHTML) +  parseFloat(valor4.innerHTML);
-        total = (total - 0.005).toFixed(2);
+        
+        total = (total).toFixed(2);
 
         if(parseFloat(total) > parseFloat(calcInss.value)){
             calcInss.value = total;            
