@@ -27,6 +27,8 @@ function apiCalcInss(valor){
     valor3.innerHTML = 0,00;
     base4.innerHTML = 0,00;
     valor4.innerHTML = 0,00;
+    document.getElementById("tv").innerHTML = 0,00;
+    document.getElementById("tb").innerHTML = 0,00;
 
     if(valor != "" && valor > 0) {
         if(valor >= acimaTeto){
