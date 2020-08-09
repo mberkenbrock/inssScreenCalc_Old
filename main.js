@@ -28,16 +28,16 @@ function apiCalcInss(valor){
     const base4  = document.getElementById("b4");
     const valor4 = document.getElementById("v4");
 
-    base1.innerHTML = 0,00;
-    valor1.innerHTML = 0,00;
-    base2.innerHTML = 0,00;
-    valor2.innerHTML = 0,00;
-    base3.innerHTML = 0,00;
-    valor3.innerHTML = 0,00;
-    base4.innerHTML = 0,00;
-    valor4.innerHTML = 0,00;
-    document.getElementById("tv").innerHTML = 0,00;
-    document.getElementById("tb").innerHTML = 0,00;
+    base1.innerHTML = '0.00';
+    valor1.innerHTML = '0.00';
+    base2.innerHTML = '0.00';
+    valor2.innerHTML = '0.00';
+    base3.innerHTML = '0.00';
+    valor3.innerHTML = '0.00';
+    base4.innerHTML = '0.00';
+    valor4.innerHTML = '0.00';
+    document.getElementById("tv").innerHTML = '0.00'
+    document.getElementById("tb").innerHTML = '0.00'
 
     if(valor != "" && valor > 0) {
         if(valor >= acimaTeto){
