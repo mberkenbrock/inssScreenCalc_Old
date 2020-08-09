@@ -106,7 +106,7 @@ function apiCalcInss(valor){
         }
 
         calcInss.value =   (valorInss - 0.005).toFixed(2);
-        vlAliquota = valor < acimaTeto ? ((valorInss / valor) * 100).toFixed(2) : '11,69';
+        vlAliquota = valor < acimaTeto ? ((valorInss / valor) * 100).toFixed(2) : '11.69';
         aliquota.value = vlAliquota + '%';
 
         var valor10 = valor > acimaTeto ? acimaTeto * 100 : valor * 100;
@@ -127,6 +127,7 @@ function apiCalcInss(valor){
     }
     else{
         aliquota.value = '0,00%';
-        calcInss.value = '0,00';
+        calcInss.value = '0.00';
     }
 }
+
