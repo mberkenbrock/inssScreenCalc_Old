@@ -4,6 +4,15 @@ const faixaValorInss = [78.37,94.01,125.37,415.33];
 const percentualFaixa = [0.075,0.09,0.12,0.14];
 const valorFaixaDesconto = [1045.00,1044.60,1044.80,2966.66];
 
+
+function fnValorFormatado(valor){
+    var valor20 =  (valor * 100).toString();
+    var len = valor20.length;
+    var valorFormatado2 = valor20.substring(0, len - 2) + "." + valor20.substring(len - 2);
+
+    return valorFormatado2;
+}
+
 function apiCalcInss(valor){
     var valorInss = 0;
     var valorRestante = 0;
@@ -45,7 +54,7 @@ function apiCalcInss(valor){
         else{
             if(valor <= valorFaixaDesconto[0]){
                 valorInss = valor * percentualFaixa[0];
-                base1.innerHTML =  valor; 
+                base1.innerHTML =  fnValorFormatado(valor);
                 valor1.innerHTML = (valor * percentualFaixa[0]).toFixed(2);
             }
             else {     
@@ -97,7 +106,7 @@ function apiCalcInss(valor){
         }
 
         calcInss.value =   (valorInss - 0.005).toFixed(2);
-        vlAliquota = valor < acimaTeto ? ((valorInss / valor) * 100).toFixed(2) : '11.69';
+        vlAliquota = valor < acimaTeto ? ((valorInss / valor) * 100).toFixed(2) : '11,69';
         aliquota.value = vlAliquota + '%';
 
         var valor10 = valor > acimaTeto ? acimaTeto * 100 : valor * 100;
@@ -115,5 +124,9 @@ function apiCalcInss(valor){
         
         document.getElementById("tv").innerHTML = calcInss.value;
         document.getElementById("tb").innerHTML = valorFormatado;
+    }
+    else{
+        aliquota.value = '0,00%';
+        calcInss.value = '0,00';
     }
 }
