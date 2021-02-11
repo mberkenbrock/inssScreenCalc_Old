@@ -1,8 +1,8 @@
-const vlTeto = 713.08;
-const acimaTeto = 6101.06;
-const faixaValorInss = [78.37,94.01,125.37,415.33];
+const vlTeto = 751.97;
+const acimaTeto = 6433.57;
+const faixaValorInss = [82.50,99.31,132.21,437.96];
 const percentualFaixa = [0.075,0.09,0.12,0.14];
-const valorFaixaDesconto = [1045.00,1044.60,1044.80,2966.66];
+const valorFaixaDesconto = [1100.00,1103.47,1101.73,3128.31];
 
 
 function fnValorFormatado(valor){
@@ -68,16 +68,17 @@ function apiCalcInss(valor){
                     valorRestante -= valorFaixaDesconto[1]; 
                     valorInss += faixaValorInss[1];
 
-
                     base2.innerHTML = valorFaixaDesconto[1].toFixed(2) ;
                     valor2.innerHTML = (valorFaixaDesconto[1] * percentualFaixa[1] - 0.005).toFixed(2);
+
 
                     if(valorRestante > valorFaixaDesconto[2]){
                         valorRestante -= valorFaixaDesconto[2]; 
                         valorInss += faixaValorInss[2];
 
                         base3.innerHTML = valorFaixaDesconto[2].toFixed(2);
-                        valor3.innerHTML = (valorFaixaDesconto[2] * percentualFaixa[2] - 0.005).toFixed(2);
+                        valor3.innerHTML = (valorFaixaDesconto[2] * percentualFaixa[2]).toFixed(2);
+
 
                         if(valorRestante > valorFaixaDesconto[3]){
                             valorInss += faixaValorInss[3];
