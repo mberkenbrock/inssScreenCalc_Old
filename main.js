@@ -1,6 +1,6 @@
 const vlTeto = 751.97;
 const acimaTeto = 6433.57;
-const faixaValorInss = [82.50,99.31,132.21,437.96];
+const faixaValorInss = [82.50,99.31,132.20,437.96];
 const percentualFaixa = [0.075,0.09,0.12,0.14];
 const valorFaixaDesconto = [1100.00,1103.47,1101.73,3128.31];
 
