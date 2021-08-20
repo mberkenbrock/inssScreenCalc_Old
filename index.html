@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html >
 
 <head class="head">
-	
-
-
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175191432-1"></script>
@@ -25,22 +22,17 @@
 
 
     <script src='main.js'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
-        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
 </head>
 
 <body class="body">
-	
-	
-
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-3">
-                <img src="logo.PNG" class="img-fluid" alt="Imagem responsiva">
-            </div>
-			<div class="col-md-9" style="max-width:700px;">
+    <div class="container-fluid" >
+		<div class="row" >
+            <img class="logo" src="logo2.png">
+            <h3 class="textologo">| CalculoINSS.com |</h3>
+            <div class="col-md-9">
 				<div class="row">
 					<div class="col-md-4">
 						<h3>Base INSS</h3>
@@ -51,17 +43,20 @@
 						<h3>Valor INSS</h3>
 						<input type="text" class="form-control" id="calcInss" disabled>
 					</div>
-
 					<div class="col-md-4">
 						<h3>Alíquota Efetiva</h3>
 						<input type="text" class="form-control" id="aliquota" disabled>
 					</div>
 				</div>
 			</div>
-        </div>        
+        </div>   
         <br>
-        <div class="table-responsive table-sm">
-			<div class=" PrimeiracalcBase" style="max-width:600px">
+        <br>     
+
+        <div class="diferente">
+
+        <div class="table-responsive table-sm" >
+			<div class="PrimeiracalcBase">
                 <table class="table table-striped">
                     <thead class="thead-dark" >
                         <TR>
@@ -102,15 +97,16 @@
                             <TD id="tb">0,00</TD>
                             <TD id="tv">0,00</TD>
                         </TR>
-                        
                     </tbody>
                 </table>
+				<br>
+	    		<br>
             </div>
         </div>
 
         <div class="table-responsive table-sm">
 			<div class=" calcBase">
-                <table class="table table-striped">
+                <table class="table table-striped" style="max-width:1300px">
                     <thead class="thead-dark">
                         <TR align="right">
                             <th scope="col">Base de cálculo (R$)</th>
@@ -173,9 +169,17 @@
                 </table>
             </div>
         </div>
-        <div class="alert alert-dark" role="alert">
-            Ano 2021 - Informe o Valor Base do Funcionário no Campo <b>Base INSS</b>
-        </div>
-    </div>	
+       
+    </div>
+    </div>
+
+    <!-- Atualizar ainda 
+    <div class="alert alert-dark" role="alert">
+        <h6>Ano 2021 - Informe o Valor Base do Funcionário no Campo <strong>Base INSS</strong></h6>
+    </div>
+
+    -->
 </body>
+
+
 </html>
